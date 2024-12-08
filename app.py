@@ -6,11 +6,11 @@ from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 
 # Load the LSTM model
-model = load_model("D:/Georgian BDAT/Data Sys Arch 1002/final project/lstm_stock_price_model.keras")
+model = load_model("lstm_stock_price_model.keras")
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv("D:/Georgian BDAT/Data Sys Arch 1002/final project/market_data.csv")
+    data = pd.read_csv("market_data.csv")
     data = data.sort_values("time_record")
     return data
 
